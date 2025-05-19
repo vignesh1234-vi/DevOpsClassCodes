@@ -1,0 +1,9 @@
+<!-- Administrator role with full access -->
+    <role rolename="manager-gui"/>
+    <role rolename="manager-script"/>
+    <role rolename="manager-status"/>
+    <role rolename="admin-gui"/>
+
+    <!-- Admin user with roles -->
+
+    <user username="admin" password="password" roles="manager-gui,manager-script,manager-status,admin-gui"/>
