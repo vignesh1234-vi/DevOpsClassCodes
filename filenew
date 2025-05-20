@@ -7,3 +7,26 @@
     <!-- Admin user with roles -->
 
     <user username="admin" password="password" roles="manager-gui,manager-script,manager-status,admin-gui"/>
+
+
+----------------------
+Step 2: 
+Install and setup Tomcat server :
+	---> Connect the instance
+	---> sudo -i
+	---> sudo apt update
+	---> sudo apt install fontconfig openjdk-17-jre
+	---> java --version
+	---> sudo apt-cache search tomcat
+	---> apt-get install -y tomcat9 tomcat9-admin  
+	---> sudo systemctl status tomcat9
+	(if tomcat9 is failed and error is because of jre or jvm path 	then follow below 3 comments)
+	---> readlink -f $(which java)
+	(This will give you the path to the java binary. For 	OpenJDK 17, it’s usually something like 	/usr/lib/jvm/java-17-openjdk-amd64/bin/java.)
+	---> sudo nano /etc/default/tomcat9
+	---> JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+	---> sudo systemctl restart tomcat9
+	---> sudo systemctl status tomcat9
+	---> public_ip_of_qa_server : 8080
+		(It works !)
+
