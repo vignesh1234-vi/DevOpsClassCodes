@@ -29,4 +29,4 @@ Install and setup Tomcat server :
 	---> sudo systemctl status tomcat9
 	---> public_ip_of_qa_server : 8080
 		(It works !)
-
+...
